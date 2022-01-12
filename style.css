@@ -1461,3 +1461,20 @@ input[type="email"]::selection, input[type="text"]::selection {
     color: var(--blue-color);
     border-bottom: 1px solid var(--dark-blue);
 }
+.related-product-img {
+    display: flex;
+    gap: 1rem;
+}
+.related-list {
+    padding: 25px 0;
+}
+.related-product-img li {
+    background-color: var(--blue-color);
+}
+
+.related-product-img li .item-info span{
+    color: var(--white-color);
+}
+.related-product-img li .item-info li {
+    color: var(--yellow-color);
+}
