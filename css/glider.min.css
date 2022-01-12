@@ -1,0 +1,58 @@
+.glider,.glider-contain{
+    margin:0 auto;
+}
+.glider-contain{
+    width:100%;
+}
+.glider{
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    -ms-overflow-style:none;
+}
+.glider-track{
+    width:100%;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    align-items: center;
+}
+.glider.draggable{
+    user-select:none;
+    cursor:-webkit-grab;
+    cursor:grab
+}
+.glider.draggable .glider-slide img{
+    user-select:none;
+    pointer-events:none;
+}
+.glider.drag{
+    cursor:-webkit-grabbing;
+    cursor:grabbing;
+}
+.glider-slide{
+    user-select:none;
+    justify-content:center;
+    align-content:center;
+    width:100%;
+}
+.glider::-webkit-scrollbar{
+    opacity:0;
+    height:0
+}
+.glider-next,.glider-prev{
+    cursor:pointer;
+    opacity:1;
+    transition:opacity .5s cubic-bezier(.17,.67,.83,.67),color .5s cubic-bezier(.17,.67,.83,.67);
+}
+.glider-next:focus,.glider-next:hover,.glider-prev:focus,.glider-prev:hover{
+    color:#ccc
+}
+.glider-next{
+    right:-23px;left:auto
+}
+.glider-next.disabled,.glider-prev.disabled{
+    opacity:.25;
+    cursor:default;
+}
